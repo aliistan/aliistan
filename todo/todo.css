@@ -1,0 +1,35 @@
+body { 
+	font-family: arial, sans-serif; 
+} 
+ol#addCreatTask { 
+	padding: 0; 
+} 
+#addCreatTask li i {
+	float: right;
+	cursor: pointer;
+}
+ol#addCreatTask li { 
+	border-bottom: 1px solid #a9a9a9; 
+	padding: 10px; 
+	background-image: linear-gradient(#f9f9f9, #e3e3e6); 
+  list-style-position: inside;
+  
+} 
+ol#addCreatTask li:last-child { 
+	border-bottom: none; 
+	border-bottom-right-radius: 5px; 
+	border-bottom-left-radius: 5px;
+	 
+} 
+ol#addCreatTask li:first-child { 
+	border-top-right-radius: 5px; 
+	border-top-left-radius: 5px; 
+
+} 
+#div.cross {
+	
+}
+.modal-body input {
+	border: none;
+	
+}

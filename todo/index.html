@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TODO-App</title>
+	<!-- bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!--<script src = "bootstrap/todoad_store.js"></script>-->
+	<link rel="stylesheet" type="text/css" href="todo.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<!--<script type="text/javascript" src="todoad.js"></script>-->
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>TODO App</h1>
+		</header>
+	<article>
+			<form class="form-group">
+				<ol id ="addCreatTask">
+					<span></span>				
+ 				</ol>
+ 				<input type="buton" id="addTaskNew" class="form-control"
+ 				  placeholder="Write up something ">
+ 			</form>
+ 			<div>
+ 			<button type="submit" id="addTodo" class="btn btn-success" value="task">
+ 			Add A Task
+ 			</button>
+ 			</div>
+	</article>
+	
+		<div class="modal fade" id="modal-1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h3  class="modal-title">Edit</h3>
+					</div>
+					<div class="modal-body"><input id="contentText"></div>
+					<div class="modal-footer"><button class="btn btn-danger" type="button" id="button2" data-dismiss="modal">save change</button></div>
+					
+				</div>
+			</div>
+
+		</div>
+	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
+
+		<script type="text/javascript">
+
+
+			window.onload = init;
+			function init() {
+			
+
+			var submit = document.getElementById("addTodo");
+			submit.onclick = handleButtonClick;
+		
+			function handleButtonClick () {
+				var creatTask = document.getElementById("addTaskNew");
+				var writeUp = creatTask.value;	
+				if (writeUp == "") {
+					alert("Creat task");
+				} else {
+					creatTask.value = "";
+					var li = document.createElement("li");
+					var ol = document.getElementById("addCreatTask");	
+					var iElem = document.createElement("i");
+
+					li.innerHTML = writeUp;
+
+					li.addEventListener("click", popup, false);
+					li.setAttribute("data-toggle", "modal");
+	        		li.setAttribute("data-target", "#modal-1");
+					ol.appendChild(li);
+					li.appendChild(iElem);
+					cross();
+					var tdMask = 'form-group';
+					li = document.getElementsByTagName('li');
+					localStorage.setItem('saveTask' + li.length, writeUp);
+					
+				}
+
+			};
+
+			function showTask() {
+				var storageLength = localStorage.length;
+				if (storageLength > 0) {
+					for (var i = 0; i < storageLength ; i++) {
+						var value = localStorage.getItem(localStorage.key(i)), 
+							creatTask = document.getElementById("addTaskNew");
+						creatTask.value = "";
+						var li = document.createElement("li");
+						var ol = document.getElementById("addCreatTask");	
+						var iElem = document.createElement("i");
+
+						li.innerHTML = value;
+
+						li.addEventListener("click", popup, false);
+						li.setAttribute("data-toggle", "modal");
+		        		li.setAttribute("data-target", "#modal-1");
+						ol.appendChild(li);
+						li.appendChild(iElem);
+						cross();
+					};
+				};
+			}
+			showTask();
+
+			function cross() {
+			    var nodeList = document.getElementsByTagName("i");
+			    for (var i = 0; i < nodeList.length; i++) {
+			        nodeList[i].setAttribute("class","fa fa-times");
+			        nodeList[i].onclick = removeParent;
+			    }
+			};
+
+			function removeParent(evt) {
+				evt.stopPropagation();
+            	var currentLi = evt.target.parentNode,
+            		currentValue = currentLi.innerText,
+            		storageLength = localStorage.length;
+				if (storageLength > 0) {
+					for (var i = 0; i < storageLength ; i++) {
+						var value = localStorage.getItem(localStorage.key(i));
+						if (currentValue == value) {
+							console.log(currentValue);
+							localStorage.removeItem(localStorage.key(i));
+						}
+			        } 
+			    }
+			    currentLi.remove();
+		    };
+
+						
+			function popup(e) {
+				var content = document.getElementById("contentText");
+				content.value = e.target.innerText;
+				e.target.classList.add("toEdit");
+				function secondButtonOn(ev) {
+					if (content.value == onchange) {
+						var newItem = document.getElementsByClassName("toEdit")[0];
+						newItem.innerHTML = content.value + i;
+						var i;
+						for (var i = 0; i < nodeList.length; i++) {
+							nodeList[i].setAttribute("class","fa fa-times");
+							nodeList[i].onclick=removeParent;
+							function removeParent(evt){
+								evt.stopPropagation();
+								evt.target.parentNode.remove();
+							}
+						};
+
+					}
+					e.target.classList.remove("toEdit");
+				}
+			};
+		}
+		
+		
+
+		
+
+    	</script>
+
+	
+
+
+</body>
+</html>
