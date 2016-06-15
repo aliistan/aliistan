@@ -1,0 +1,173 @@
+html { overflow-x: hidden; 
+
+}
+.container1{
+	background-image:url(english.jpg);
+	background-position:center;
+	border-radius: 5px;
+	width: 1365px;
+	height: 500px;
+	margin-top: 50px;
+}
+.navbar li{
+	margin-left: 40px;
+}
+.name{
+	
+	text-align: center;
+	font-family: Segoe Script;
+}
+.carousel-height {
+	height: 305px;
+}
+.iAm{
+	display: none;
+	width: 965px;
+	height: 1040px;
+	background-color: ;
+	font-family: times;
+	margin-left: 200px;
+	font-size: 13pt;
+	font-family: 
+}
+
+
+
+.Bio{
+	text-align: center;
+	font-family: segoe script;
+	background-color: #e9e9e9;
+    width: 1350px;
+    padding-top: 20px;
+    height: 100px;
+	color: black;
+}
+.container-fluid{
+	
+
+}
+
+
+.carousel {
+margin-left: 200px;
+width: 965px;
+}
+
+
+.Info{
+	margin-top: 35px;
+	text-align: center;
+	font-family: segoe script;
+	background-color: #e9e9e9;
+    width: 1350px;
+    padding-top: 20px;
+    height: 100px;
+	color: black;
+}
+.infotekst{
+	display: none;
+	width: 965px;
+	height: 150px;
+	font-family: times;
+	margin-left: 200px;
+	font-size: 15pt;
+	font-family: 
+}
+
+ .container-footer{
+ 	margin-top: 180px;
+ 	width: 1350px;
+ 	height: 75px;
+ 	background-color: black; 
+ }
+
+
+.face a img{
+	width: 35px;
+	height: 35px;
+	margin-left: 95%;
+	margin-top: 4px;
+}
+  
+.vkon img{
+width: 35px;
+height: 35px;
+border-radius: 50%;
+margin-left: 95%;
+}
+.year{
+	color: white;
+	text-align: center;
+	font-size: 10pt;
+	margin-top: -15px;
+}
+
+ .email{
+ 	text-align: right;
+ 	color: lightgrey;
+ 	
+ }
+
+
+.catal{
+	font-family: segoe script;
+	text-align: center;
+	font-size: 15pt;
+}
+.text1{
+display: none;
+margin-left: 200px;
+border: 1px solid white;
+width: 1000px;
+height: 440px;
+font-size: 12pt;
+}
+.poem2{
+font-family: segoe script;
+text-align: center;
+}
+
+.text2{
+display: none;
+margin-left: 200px;
+font-family: segoe script;
+border: 1px solid white;
+width: 1000px;
+height: 440px;
+text-align: le;
+font-size: 12pt;
+}
+.poem3{
+font-family: segoe script;
+text-align: center;
+}
+
+.text3{
+display: none;
+margin-left: 200px;
+font-family: segoe script;
+border: 1px solid white;
+width: 1000px;
+height: 740px;
+text-align: le;
+font-size: 12pt;
+}
+.poem4{
+font-family: segoe script;
+text-align: center;
+}
+
+.text4{
+display: none;
+margin-left: 200px;
+font-family: segoe script;
+border: 1px solid white;
+width: 1000px;
+height: 740px;
+text-align: le;
+font-size: 12pt;
+}
+.container11{
+	border: 1px solid jumbotron;
+	text-align: center;
+}

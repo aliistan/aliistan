@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html data-ng-app="bio-app">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- Styles -->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css"
+			  href="//fonts.googleapis.com/css?family=Roboto:100italic,100,300italic,300,400italic,400,500italic,500,700italic,700,900italic,900">
+				<!-- Bootstrap css -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="css/app.css">
+		</head>
+	<body>
+
+
+
+
+
+
+		<div class="container1" ng-model="show" >
+		    <div class="navbar navbar-inverse navbar-fixed-top">
+		        <div class="container-fluid">
+		            <div class="navbar-header">
+		            </div>
+		            <div class="collapse navbar-collapse" id="responsive-menu">
+		                <ul class="nav navbar-nav">
+		                    <li><a href="http://localhost/#/">Головна</a>
+		                    </li>
+		                    <li><a href="http://localhost/#/published-translations">Мої переклади</a>
+		                    </li>
+		                    <li><a href="http://localhost/#/translated-poetry">Переклади віршів</a>
+		                    </li>
+		                    <li><a href="http://localhost/#/lessons">Уроки</a>
+		                    </li>
+		                    <li><a href="http://localhost/#/contact">Контакти</a>
+		                    </li>
+		                    <li><a href="http://localhost/#/photo">Галарея</a>
+		                    </li>
+		                </ul>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+        <div class="name">
+            <h2>Ivan Popatenko</h2>
+        </div>
+
+
+
+
+
+
+		<div class="views-wrapper" data-ng-view></div>
+		
+
+
+
+
+		
+		<div class="container-footer">
+	        <div class="face"><a href="https://www.facebook.com/ivan.popatenko?fref=ts">
+	        	<img src="https://d75ljpmh88vxs.cloudfront.net/web/images/facebook-hover.png" data-src="https://d75ljpmh88vxs.cloudfront.net/web/images/facebook-hover.png" class="hover" alt="facebook"/>
+	        </div>
+	        <div class="vkon">
+	        	<img src="imagesVK.png">
+	        </div>
+	        <div class="year">2016p</div>
+		</div>
+		<!-- JavaScript -->
+		<!-- Jquery, Bootstrap js -->
+		
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  
+  		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
+		<script src="https://code.angularjs.org/1.4.4/angular-animate.js"></script>
+		
+		<!-- App -->
+		<script type="text/javascript" src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+		<script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+		<script type="text/javascript" src="node_modules/bootstrap-ui-datetime-picker/dist/datetime-picker.min.js"></script>
+		<script type="text/javascript" src="app/app.js"></script>
+		<script type="text/javascript" src="app/app.routes.js"></script>
+		<script type="text/javascript" src="app/main/main.directive.js"></script>
+		<script type="text/javascript" src="app/main/main.controller.js"></script>
+		<script type="text/javascript" src="app/translations/translations.controller.js"></script>
+		<script type="text/javascript" src="app/poetry/poetry.controller.js"></script>
+	 	<script type="text/javascript" src="app/lessons/lessons.controller.js"></script>
+		<script type="text/javascript" src="app/contact/contact.controller.js"></script>
+		<script type="text/javascript" src="app/common/carousel.controller.js"></script>
+		<script type="text/javascript" src="app/common/carousel.directive.js"></script>
+		<!--<script type="text/javascript" src="app/common/not-found.controller.js"></script>-->
+	</body>
+</html>
